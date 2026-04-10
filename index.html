@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rajiv Ravi | HR Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "_8D6GDOJeiBlXraCr",
+      });
+   })();
+</script>
+
+
+
+
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:#0a0f1c;color:#fff;overflow-x:hidden;}
+
+/* NAV */
+header{
+position:fixed;width:100%;top:0;display:flex;justify-content:space-between;
+padding:20px 60px;background:rgba(0,0,0,0.4);backdrop-filter:blur(15px);z-index:1000;
+}
+header h1{color:#00e5ff;}
+nav a{margin:0 15px;color:#fff;text-decoration:none;transition:.3s;}
+nav a:hover{color:#00e5ff;}
+
+/* HERO */
+.hero{
+height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;
+background:linear-gradient(270deg,#0a0f1c,#001f3f,#0a0f1c);
+background-size:600% 600%;animation:bgMove 10s ease infinite;
+}
+@keyframes bgMove{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+
+.hero h2{font-size:3.5rem;}
+.hero span{color:#00e5ff;}
+.hero p{margin-top:10px;font-size:1.2rem;}
+
+.btn{
+margin-top:20px;padding:12px 30px;border:none;border-radius:30px;
+background:#00e5ff;color:#000;font-weight:bold;cursor:pointer;
+transition:.3s;
+}
+.btn:hover{transform:scale(1.1);box-shadow:0 0 20px #00e5ff;}
+
+section{padding:100px 60px;}
+
+/* ABOUT */
+.about{max-width:1000px;margin:auto;text-align:center;}
+
+/* TIMELINE */
+.timeline{position:relative;max-width:1000px;margin:auto;}
+.timeline::after{
+content:'';position:absolute;width:4px;background:#00e5ff;top:0;bottom:0;left:50%;
+}
+
+.container{
+padding:20px 40px;position:relative;width:50%;
+}
+.container.left{left:0;}
+.container.right{left:50%;}
+
+.content{
+padding:20px;background:#111c2e;border-radius:15px;
+transition:.3s;
+}
+.content:hover{transform:scale(1.05);}
+
+/* SKILLS */
+.skills{max-width:1000px;margin:auto;}
+.skill-bar{margin:15px 0;}
+.skill-bar span{display:block;margin-bottom:5px;}
+.bar{height:8px;background:#1e293b;border-radius:10px;overflow:hidden;}
+.bar div{height:100%;background:#00e5ff;width:0;transition:1s;}
+
+/* CONTACT */
+.contact{max-width:600px;margin:auto;text-align:center;}
+input,textarea{
+width:100%;padding:10px;margin:10px 0;border:none;border-radius:10px;
+}
+
+footer{text-align:center;padding:20px;background:#020617;}
+
+</style>
+</head>
+<body>
+
+<header>
+<h1>Rajiv Ravi</h1>
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#experience">Experience</a>
+<a href="#skills">Skills</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<section id="home" class="hero">
+<h2>Hi, I'm <span>Rajiv Ravi</span></h2>
+<p>HR Generalist | HR Operations | Talent Acquisition</p>
+<button class="btn" onclick="scrollToSection('experience')">View Experience</button>
+</section>
+
+<section id="about" class="about">
+<h2>About Me</h2>
+<p>Experienced HR professional with 8+ years in HR operations, recruitment, and employee engagement across global regions. Skilled in HRIS, compliance, and end-to-end lifecycle management.</p>
+</section>
+
+<section id="experience">
+<h2 style="text-align:center">Experience Timeline</h2>
+<div class="timeline">
+
+<div class="container left">
+<div class="content">
+<h3>People Generalist - bswift</h3>
+<p>2025 - Present</p>
+</div>
+</div>
+
+<div class="container right">
+<div class="content">
+<h3>HR Operations Specialist - Ellucian</h3>
+<p>2022 - 2025</p>
+</div>
+</div>
+
+<div class="container left">
+<div class="content">
+<h3>Recruitment Coordinator - Capgemini</h3>
+<p>2021 - 2022</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<section id="skills" class="skills">
+<h2>Skills</h2>
+
+<div class="skill-bar"><span>HR Operations</span><div class="bar"><div style="width:90%"></div></div></div>
+<div class="skill-bar"><span>Recruitment</span><div class="bar"><div style="width:85%"></div></div></div>
+<div class="skill-bar"><span>SAP SuccessFactors</span><div class="bar"><div style="width:80%"></div></div></div>
+<div class="skill-bar"><span>Employee Engagement</span><div class="bar"><div style="width:88%"></div></div></div>
+
+</section>
+
+<section id="contact" class="contact">
+<h2>Contact</h2>
+<input type="text" id="name" placeholder="Your Name">
+<input type="email" id="email1" placeholder="Your Email">
+<textarea rows="5" id="message" placeholder="Message"></textarea>
+
+<button class="btn" onclick="sendMail()">Send</button>
+</section>
+
+<footer>
+<p>© 2026 Rajiv Ravi | HR Portfolio</p>
+</footer>
+
+<script>
+function scrollToSection(id){
+document.getElementById(id).scrollIntoView({behavior:'smooth'});
+}
+
+function sendMail(){
+    let parms = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email1").value,
+        message: document.getElementById("message").value,
+    };
+
+    emailjs.send("service_d57h9mp", "template_31skiq9", parms)
+    .then(function(response){
+        alert("Email sent successfully!");
+    }, function(error){
+        alert("Failed to send email!");
+        console.log(error);
+    });
+}
+
+</script>
+
+</body>
+</html>
