@@ -89,6 +89,111 @@ input,textarea{
 width:100%;padding:10px;margin:10px 0;border:none;border-radius:10px;
 }
 
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+/* Tablets */
+@media (max-width: 1024px) {
+header {
+    padding: 15px 30px;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+}
+
+section {
+    padding: 80px 30px;
+}
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+header {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    display: inline-block;
+    margin: 8px;
+}
+
+.hero h2 {
+    font-size: 2rem;
+}
+
+.hero p {
+    font-size: 1rem;
+}
+
+.btn {
+    padding: 10px 20px;
+}
+
+/* Timeline fix */
+.timeline::after {
+    left: 20px;
+}
+
+.container {
+    width: 100%;
+    padding-left: 60px;
+    padding-right: 20px;
+    margin-bottom: 20px;
+}
+
+.container.left,
+.container.right {
+    left: 0;
+}
+
+.content {
+    text-align: left;
+}
+
+/* Skills */
+.skills {
+    padding: 0 10px;
+}
+
+/* Contact */
+.contact {
+    padding: 0 10px;
+}
+
+input, textarea {
+    font-size: 14px;
+}
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+
+.hero h2 {
+    font-size: 1.6rem;
+}
+
+.hero p {
+    font-size: 0.9rem;
+}
+
+header h1 {
+    font-size: 1.2rem;
+}
+
+.btn {
+    font-size: 14px;
+}
+}
+
 footer{text-align:center;padding:20px;background:#020617;}
 
 </style>
