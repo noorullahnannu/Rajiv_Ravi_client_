@@ -4,220 +4,303 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Rajiv Ravi | HR Portfolio</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-<script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+(function(){
+  emailjs.init({ publicKey: "_8D6GDOJeiBlXraCr" });
+})();
 </script>
-<script type="text/javascript">
-   (function(){
-      emailjs.init({
-        publicKey: "_8D6GDOJeiBlXraCr",
-      });
-   })();
-</script>
-
-
-
-
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
-body{background:#0a0f1c;color:#fff;overflow-x:hidden;}
-
-/* =========================
-   RESPONSIVE DESIGN
-========================= */
-
-/* Tablets */
-@media (max-width: 1024px) {
-header {
-    padding: 15px 30px;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
 }
 
-.hero h2 {
-    font-size: 2.5rem;
+/* 🖤 LUXURY DARK BACKGROUND */
+body{
+background:linear-gradient(135deg,#0c0c0c,#1a1a1a,#000);
+color:#f5f5f5;
+overflow-x:hidden;
 }
 
-section {
-    padding: 80px 30px;
-}
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-
-header {
-    flex-direction: column;
-    align-items: center;
-    padding: 15px;
-}
-
-nav {
-    margin-top: 10px;
-}
-
-nav a {
-    display: inline-block;
-    margin: 8px;
-}
-
-.hero h2 {
-    font-size: 2rem;
-}
-
-.hero p {
-    font-size: 1rem;
-}
-
-.btn {
-    padding: 10px 20px;
-}
-
-/* Timeline fix */
-.timeline::after {
-    left: 20px;
-}
-
-.container {
-    width: 100%;
-    padding-left: 60px;
-    padding-right: 20px;
-    margin-bottom: 20px;
-}
-
-.container.left,
-.container.right {
-    left: 0;
-}
-
-.content {
-    text-align: left;
-}
-
-/* Skills */
-.skills {
-    padding: 0 10px;
-}
-
-/* Contact */
-.contact {
-    padding: 0 10px;
-}
-
-input, textarea {
-    font-size: 14px;
-}
-}
-
-/* Small Mobile */
-@media (max-width: 480px) {
-
-.hero h2 {
-    font-size: 1.6rem;
-}
-
-.hero p {
-    font-size: 0.9rem;
-}
-
-header h1 {
-    font-size: 1.2rem;
-}
-
-.btn {
-    font-size: 14px;
-}
-}
-
-/* NAV */
+/* ================= NAV ================= */
 header{
-position:fixed;width:100%;top:0;display:flex;justify-content:space-between;
-padding:20px 60px;background:rgba(0,0,0,0.4);backdrop-filter:blur(15px);z-index:1000;
+position:fixed;
+width:100%;
+top:0;
+display:flex;
+justify-content:space-between;
+padding:20px 60px;
+background:rgba(0,0,0,0.6);
+backdrop-filter:blur(15px);
+border-bottom:1px solid rgba(255,215,0,0.2);
+z-index:1000;
 }
-header h1{color:#00e5ff;}
-nav a{margin:0 15px;color:#fff;text-decoration:none;transition:.3s;}
-nav a:hover{color:#00e5ff;}
 
-/* HERO */
-.hero{
-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;
-background:linear-gradient(270deg,#0a0f1c,#001f3f,#0a0f1c);
-background-size:600% 600%;animation:bgMove 10s ease infinite;
+header h1{
+color:#ffd700;
+letter-spacing:1px;
+text-shadow:0 0 10px rgba(255,215,0,0.6);
 }
-@keyframes bgMove{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
 
-.hero h2{font-size:3.5rem;}
-.hero span{color:#00e5ff;}
-.hero p{margin-top:10px;font-size:1.2rem;}
-
-.btn{
-margin-top:20px;padding:12px 30px;border:none;border-radius:30px;
-background:#00e5ff;color:#000;font-weight:bold;cursor:pointer;
+nav a{
+margin:0 15px;
+color:#ccc;
+text-decoration:none;
 transition:.3s;
 }
-.btn:hover{transform:scale(1.1);box-shadow:0 0 20px #00e5ff;}
 
-section{padding:100px 60px;}
+nav a:hover{
+color:#ffd700;
+text-shadow:0 0 10px #ffd700;
+}
 
-/* ABOUT */
-.about{max-width:1000px;margin:auto;text-align:center;}
+/* ================= HERO ================= */
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:linear-gradient(270deg,#000,#1a1a1a,#000);
+background-size:400% 400%;
+animation:bgMove 10s ease infinite;
+}
 
-/* TIMELINE */
-.timeline{position:relative;max-width:1000px;margin:auto;}
+@keyframes bgMove{
+0%{background-position:0% 50%}
+50%{background-position:100% 50%}
+100%{background-position:0% 50%}
+}
+
+.hero h2{
+font-size:3.5rem;
+}
+
+.hero span{
+color:#ffd700;
+text-shadow:0 0 15px rgba(255,215,0,0.8);
+}
+
+.hero p{
+margin-top:10px;
+font-size:1.2rem;
+color:#aaa;
+}
+
+/* BUTTON */
+.btn{
+margin-top:20px;
+padding:12px 30px;
+border:none;
+border-radius:30px;
+background:linear-gradient(90deg,#ffd700,#ffae00);
+color:#000;
+font-weight:bold;
+cursor:pointer;
+transition:.4s;
+}
+
+.btn:hover{
+transform:scale(1.1);
+box-shadow:0 0 25px #ffd700,0 0 50px rgba(255,215,0,0.5);
+}
+
+/* ================= SECTION ================= */
+section{
+padding:100px 60px;
+}
+
+/* ================= ABOUT ================= */
+.about{
+max-width:1000px;
+margin:auto;
+text-align:center;
+color:#ccc;
+}
+
+/* ================= TIMELINE ================= */
+#experience h2{
+text-align:center;
+margin-bottom:40px;
+color:#ffd700;
+}
+
+.timeline{
+position:relative;
+max-width:1000px;
+margin:auto;
+}
+
+/* LINE */
 .timeline::after{
-content:'';position:absolute;width:4px;background:#00e5ff;top:0;bottom:0;left:50%;
+content:'';
+position:absolute;
+width:3px;
+background:linear-gradient(to bottom,#ffd700,transparent);
+top:0;
+bottom:0;
+left:50%;
+transform:translateX(-50%);
+}
+
+/* CONTAINER */
+.container{
+padding:20px 40px;
+position:relative;
+width:50%;
+}
+
+.left{left:0;}
+.right{left:50%;}
+
+/* CARD */
+.content{
+background:rgba(255,215,0,0.05);
+padding:20px;
+border-radius:15px;
+cursor:pointer;
+transition:.4s;
+border:1px solid rgba(255,215,0,0.2);
+box-shadow:0 0 15px rgba(255,215,0,0.1);
+}
+
+.content:hover{
+transform:translateY(-6px) scale(1.03);
+box-shadow:0 0 25px rgba(255,215,0,0.3);
+}
+
+/* ACTIVE */
+.content.active{
+border:1px solid #ffd700;
+box-shadow:0 0 25px #ffd700,0 0 50px rgba(255,215,0,0.3);
+}
+
+/* DETAILS */
+.details{
+max-height:0;
+opacity:0;
+overflow:hidden;
+transition:all 0.4s ease;
+margin-top:10px;
+font-size:14px;
+color:#ddd;
+}
+
+.content.active .details{
+max-height:500px;
+opacity:1;
+}
+
+/* DOT */
+.container::before{
+content:'';
+position:absolute;
+width:14px;
+height:14px;
+background:#ffd700;
+border-radius:50%;
+top:30px;
+left:50%;
+transform:translateX(-50%);
+z-index:2;
+box-shadow:0 0 10px #ffd700,0 0 20px rgba(255,215,0,0.6);
+}
+
+/* ================= SKILLS ================= */
+.skills{
+max-width:1000px;
+margin:auto;
+}
+
+.skill-bar{
+margin:15px 0;
+}
+
+.bar{
+height:8px;
+background:#222;
+border-radius:10px;
+overflow:hidden;
+}
+
+.bar div{
+height:100%;
+background:linear-gradient(90deg,#ffd700,#ffae00);
+width:0;
+transition:1s;
+}
+
+/* ================= CONTACT ================= */
+.contact{
+max-width:600px;
+margin:auto;
+text-align:center;
+}
+
+input,textarea{
+width:100%;
+padding:12px;
+margin:10px 0;
+border:none;
+border-radius:10px;
+background:#111;
+color:#fff;
+border:1px solid rgba(255,215,0,0.2);
+}
+
+input:focus,textarea:focus{
+outline:none;
+border:1px solid #ffd700;
+box-shadow:0 0 10px #ffd700;
+}
+
+/* ================= FOOTER ================= */
+footer{
+text-align:center;
+padding:20px;
+background:#000;
+color:#aaa;
+}
+
+/* ================= MOBILE ================= */
+@media(max-width:768px){
+
+header{
+flex-direction:column;
+align-items:center;
+padding:15px;
+}
+
+.hero h2{
+font-size:2rem;
 }
 
 .container{
-padding:20px 40px;position:relative;width:50%;
-}
-.container.left{left:0;}
-.container.right{left:50%;}
-
-.content{
-padding:20px;background:#111c2e;border-radius:15px;
-transition:.3s;
-}
-.content:hover{transform:scale(1.05);}
-
-/* SKILLS */
-.skills{max-width:1000px;margin:auto;}
-.skill-bar{margin:15px 0;}
-.skill-bar span{display:block;margin-bottom:5px;}
-.bar{height:8px;background:#1e293b;border-radius:10px;overflow:hidden;}
-.bar div{height:100%;background:#00e5ff;width:0;transition:1s;}
-
-/* CONTACT */
-.contact{max-width:600px;margin:auto;text-align:center;}
-input,textarea{
-width:100%;padding:10px;margin:10px 0;border:none;border-radius:10px;
+width:100%;
+left:0 !important;
+padding-left:70px;
 }
 
-/* =========================
-   RESPONSIVE DESIGN
-========================= */
-
-/* Tablets */
-@media (max-width: 1024px) {
-header {
-    padding: 15px 30px;
+.timeline::after{
+left:30px;
 }
 
-.hero h2 {
-    font-size: 2.5rem;
-}
-
-section {
-    padding: 80px 30px;
+.container::before{
+left:15px;
+transform:none;
 }
 }
-
-
-footer{text-align:center;padding:20px;background:#020617;}
-
 </style>
 </head>
+
 <body>
 
 <header>
@@ -239,33 +322,180 @@ footer{text-align:center;padding:20px;background:#020617;}
 
 <section id="about" class="about">
 <h2>About Me</h2>
-<p>Experienced HR professional with 8+ years in HR operations, recruitment, and employee engagement across global regions. Skilled in HRIS, compliance, and end-to-end lifecycle management.</p>
+<p>Experienced HR professional with 8+ years in HR operations, recruitment, and employee engagement across global regions.</p>
 </section>
 
 <section id="experience">
-<h2 style="text-align:center">Experience Timeline</h2>
+<h2>Experience Timeline</h2>
+
 <div class="timeline">
 
 <div class="container left">
-<div class="content">
+<div class="content" onclick="toggle(this)">
 <h3>People Generalist - bswift</h3>
-<p>2025 - Present</p>
+<p>2025 - Present | Bangalore</p>
+<div class="details">
+<ul>
+<li>• Manage end-to-end recruitment and talent acquisition for technical and non-technical roles, including sourcing, screening, interview coordination, and offer negotiations.</li>
+<br>
+
+<li>• Partner with hiring managers to understand business requirements and workforce planning, ensuring timely closure of open positions.</li>
+<br>
+
+<li>• Design and implement structured onboarding and induction programs to help new hires integrate quickly and reduce time-to-productivity.</li>
+<br>
+
+<li>• Act as the first point of contact for employee relations, addressing employee queries, resolving workplace concerns, and fostering a positive workplace culture.</li>
+<br>
+
+<li>• Support performance management processes, including goal setting, appraisal cycles, and career development discussions aligned with Agile/project-based teams.</li>
+<br>
+
+<li>• Ensure HR compliance and operations management, maintaining employee records in HRIS.</li>
+<br>
+
+<li>• Manage employee lifecycle activities, including documentation, payroll inputs, HR operations coordination, and exit formalities.</li>
+<br>
+
+<li>• Develop and implement employee engagement initiatives to improve retention, morale, and workplace satisfaction.</li>
+<br>
+
+<li>• Assist leadership in implementing and updating HR policies, including hybrid work, remote work, and data protection guidelines.</li>
+</ul>
+</div>
 </div>
 </div>
 
 <div class="container right">
-<div class="content">
+<div class="content" onclick="toggle(this)">
 <h3>HR Operations Specialist - Ellucian</h3>
-<p>2022 - 2025</p>
+<p>2022 - 2025 | Bangalore</p>
+<div class="details">
+<ul>
+<li>• Spearheaded end-to-end HR operations lifecycle covering pre-onboarding, onboarding, employee engagement, and exit formalities for India and EMEA regions, ensuring seamless employee experience.</li>
+<br>
+
+<li>• Acted as the single point of contact (SPOC) for critical compliance processes such as Right to Work (UK & Ireland) and I-9 verification (US), ensuring 100% regulatory adherence.</li>
+<br>
+
+<li>• Partnered with external background verification vendors (Sterling & Decode) to streamline and track BGV processes across APAC & EMEA, reducing turnaround time by 20%.</li>
+<br>
+
+<li>• Administered and maintained employee records in SAP SuccessFactors Employee Central, efficiently resolving HR Service Center (HRSC) tickets within SLA.</li>
+<br>
+
+<li>• Designed and implemented the Connections (Appraisal) Meeting roll-out, enhancing performance review coverage across the organization.</li>
+<br>
+
+<li>• Led cross-functional collaboration with IT, Finance, Legal, Facilities, Compensation & Benefits, and TA teams to deliver efficient onboarding and offboarding workflows.</li>
+<br>
+
+<li>• Managed the telecommuting approval process, ensuring policy compliance and timely coordination with business leaders to support hybrid/remote work arrangements.</li>
+<br>
+
+<li>• Conducted region-wise employee benefit orientation sessions (virtual & in-person), improving new hire engagement and policy awareness.</li>
+<br>
+
+<li>• Initiated and delivered the Offboarding Automation Project, enhancing operational efficiency and minimizing manual intervention using tools like Leena.</li>
+<br>
+
+<li>• Played a key role in testing and deploying new onboarding features in the ATS system, contributing to system optimization and usability.</li>
+<br>
+
+<li>• Authored and maintained comprehensive Standard Operating Procedures (SOPs) and ensured consistent adherence to SLA metrics across HR Ops functions.</li>
+<br>
+
+<li>• Generated employment verification and HR letters; managed employee benefits-related tickets ensuring accuracy and timely resolution.</li>
+<br>
+
+<li>• Partnered with finance and payroll to deliver timely and error-free Full & Final Settlements, including salary inputs during payroll cut-off and exit timelines.</li>
+<br>
+
+<li>• Oversaw timesheet governance and audit support during financial year-end reviews, ensuring compliance and readiness for internal/external audits.</li>
+</ul>
+</div>
 </div>
 </div>
 
 <div class="container left">
-<div class="content">
+<div class="content" onclick="toggle(this)">
 <h3>Recruitment Coordinator - Capgemini</h3>
-<p>2021 - 2022</p>
+<p>2021 - 2022 | Bangalore</p>
+<div class="details">
+<ul>
+<li>• Coordinated end-to-end interview scheduling across multiple departments, ensuring seamless communication between candidates, recruiters, and hiring managers.</li>
+<br>
+
+<li>• Facilitated smooth onboarding experiences by managing documentation, background verification, and induction processes for new hires.</li>
+<br>
+
+<li>• Acted as a liaison between candidates and internal teams to ensure timely collection and verification of pre-joining documents.</li>
+<br>
+
+<li>• Maintained and updated real-time joiner data, providing accurate and timely reports to the Recruitment Manager for strategic decision-making.</li>
+<br>
+
+<li>• Supported recruiters and hiring managers with live sourcing, candidate screening, and interview logistics to accelerate the hiring process.</li>
+<br>
+
+<li>• Conducted daily stand-up meetings with recruitment teams to align on hiring priorities, resolve bottlenecks, and track progress on open positions.</li>
+<br>
+
+<li>• Managed and maintained hiring trackers, dashboards, and recruitment metrics to ensure transparency and accountability across the hiring lifecycle.</li>
+<br>
+
+<li>• Utilized SAP SuccessFactors to manage recruitment workflows, candidate records, and onboarding tasks, ensuring compliance with organizational policies.</li>
+<br>
+
+<li>• Generated and analyzed daily recruitment fulfillment reports to monitor hiring targets, identify gaps, and support continuous process improvement.</li>
+<br>
+
+<li>• Collaborated with cross-functional teams including HR and business units to ensure a smooth onboarding experience for new employees.</li>
+</ul>
 </div>
 </div>
+</div>
+
+<div class="container right">
+<div class="content" onclick="toggle(this)">
+<h3>HR Coordinator - St. Jude’s Public School & Junior College</h3>
+<p>2018 - 2021 | Kotagiri</p>
+<div class="details">
+<ul>
+<li>• Managed staff attendance, admissions, and school maintenance.</li>
+<br>
+
+<li>• Handled PRO responsibilities and coordinated student logistics and welfare.</li>
+<br>
+
+<li>• Organized departmental meetings and supported onboarding of teaching staff.</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+<div class="container left">
+<div class="content" onclick="toggle(this)">
+<h3>US IT Recruiter - CGV AK USA INC</h3>
+<p>2015 - 2017 | Coimbatore</p>
+<div class="details">
+<ul>
+<li>• Recruited H1B, Citizens, and Green Card holders for US-based projects.</li>
+<br>
+
+<li>• Managed full-cycle recruitment including sourcing, screening, and onboarding.</li>
+<br>
+
+<li>• Utilized job boards (Dice, Monster), LinkedIn, and Boolean search for candidate sourcing.</li>
+<br>
+
+<li>• Prepared weekly reports and coordinated with VP and MD for hiring updates.</li>
+</ul>
+</div>
+</div>
+</div>
+
 
 </div>
 </section>
@@ -275,8 +505,8 @@ footer{text-align:center;padding:20px;background:#020617;}
 
 <div class="skill-bar"><span>HR Operations</span><div class="bar"><div style="width:90%"></div></div></div>
 <div class="skill-bar"><span>Recruitment</span><div class="bar"><div style="width:85%"></div></div></div>
-<div class="skill-bar"><span>SAP SuccessFactors</span><div class="bar"><div style="width:80%"></div></div></div>
-<div class="skill-bar"><span>Employee Engagement</span><div class="bar"><div style="width:88%"></div></div></div>
+<div class="skill-bar"><span>SAP Success Factors</span><div class="bar"><div style="width:90%"></div></div></div>
+<div class="skill-bar"><span>Employee Engagement</span><div class="bar"><div style="width:85%"></div></div></div>
 
 </section>
 
@@ -298,22 +528,25 @@ function scrollToSection(id){
 document.getElementById(id).scrollIntoView({behavior:'smooth'});
 }
 
-function sendMail(){
-    let parms = {
-        name: document.getElementById("name").value,
-        email: document.getElementById("email1").value,
-        message: document.getElementById("message").value,
-    };
-
-    emailjs.send("service_d57h9mp", "template_31skiq9", parms)
-    .then(function(response){
-        alert("Email sent successfully!");
-    }, function(error){
-        alert("Failed to send email!");
-        console.log(error);
-    });
+/* ONE CARD OPEN AT A TIME */
+function toggle(el){
+document.querySelectorAll('.content').forEach(item=>{
+if(item!==el) item.classList.remove("active");
+});
+el.classList.toggle("active");
 }
 
+function sendMail(){
+let parms={
+name:document.getElementById("name").value,
+email:document.getElementById("email1").value,
+message:document.getElementById("message").value,
+};
+
+emailjs.send("service_d57h9mp","template_31skiq9",parms)
+.then(()=>alert("Email sent successfully!"))
+.catch(()=>alert("Failed to send email!"));
+}
 </script>
 
 </body>
